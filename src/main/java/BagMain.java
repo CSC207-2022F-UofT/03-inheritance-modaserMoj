@@ -18,7 +18,7 @@ class BagMain {
         for(Bag s: bags){
             s.enhance();
             if (double_enhance_handbags){
-            if (s instanceof HandBag and ){
+            if (s instanceof HandBag){
                 s.enhance();
             }
             }
