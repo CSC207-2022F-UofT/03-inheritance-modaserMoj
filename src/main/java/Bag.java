@@ -104,7 +104,13 @@ public abstract class Bag {
     public String popItem(){
         if(numberOfContents>0){
             String val = contents[numberOfContents-1];
-            contents = Arrays.copyOf(contents, contents.length -1);
+
+            String[] arr = new String[capacity];
+            for (int i = 0; i < contents.length-1; i++) {
+                arr[i] = contents[i];
+            }
+            contents = arr;
+//            contents = Arrays.copyOf(contents, contents.length -1);
             numberOfContents --;
             return val;
         } else return null;
